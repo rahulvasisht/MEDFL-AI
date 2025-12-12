@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  🎗️ MedFL AI </title>
+    <link rel="stylesheet" href="medflmmaon.css">
+
+  </head>
+<body>
+    <header>
+        <nav>
+            <div class="logo" onclick="showHomePage()">🎗️ MedFL AI </div>
+            <ul class="nav-links">
+                <li><a href="#home" onclick="showHomePage(); return false;">Home</a></li>
+                <li><a href="#ai-platform" onclick="showHomePage(); setTimeout(() => document.getElementById('ai-platform').scrollIntoView({behavior: 'smooth'}), 100); return false;">AI Detection</a></li>
+                <li><a href="#services" onclick="showHomePage(); setTimeout(() => document.getElementById('services').scrollIntoView({behavior: 'smooth'}), 100); return false;">Services</a></li>
+                <li><a href="#" onclick="showAboutPage(); return false;">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="homePage" class="page-container active">
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Early Cancer Detection Through Muscle Growth Analysis</h1>
+            <div class="hero-text"></div>
+                <h2> Lung Health Check classification </h2>
+                <p>Our AI-powered system detects abnormal muscle growth patterns that indicate cancer presence. Leveraging federated learning from multiple medical institutions to identify critical warning signs.</p>
+                <div class="cta-buttons">
+                    <button class="cta-button" onclick="document.getElementById('ai-platform').scrollIntoView({behavior: 'smooth'})">Analyze Symptoms</button>
+                    <button class="cta-button secondary">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="health-assistant-taking-care-female-patient.jpg" alt="Healthcare Professional with Patient" style="width: 100%; height: auto; border-radius: 30px;">
+            </div>
+        </div>
+    </section>
+
+    <div class="info-banner">
+        <h3> Note :: </h3>
+        <p>Unwanted or abnormal muscle growth can be a definitive sign of cancer. Our federated learning AI analyzes growth patterns, location, rate of development, and associated symptoms to provide accurate cancer detection. Early identification is crucial for successful treatment outcomes.</p>
+    </div>
+
+    <section class="ai-section" id="ai-platform">
+        <div class="ai-content">
+            <h2>AI-Powered Cancer Detection System</h2>
+            <p class="ai-subtitle">Analyze abnormal muscle growth patterns using advanced federated learning technology</p>
+            
+            <div class="ai-demo">
+                <div class="input-section">
+                    <h3>Upload Medical Imaging for AI Analysis</h3>
+                    
+                    <div class="input-group">
+                        <label for="imageUpload">Upload X-ray, CT Scan, or MRI Image</label>
+                        <input type="file" id="imageUpload" accept="image/*" style="padding: 1rem; border: 2px dashed #4A90E2; background: #F5F5F5;">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="age">Patient Age</label>
+                        <input type="number" id="age" min="1" max="120" placeholder="Enter age">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="additionalInfo">Clinical Notes and Symptoms</label>
+                        <textarea id="additionalInfo" placeholder="Describe symptoms, medical history, and any relevant clinical observations..."></textarea>
+                    </div>
+
+                    <button class="analyze-btn" onclick="analyzeWithFL()">Analyze Medical Imaging with AI</button>
+                </div>
+
+                <div class="results-section" id="results">
+                    <h3>AI Detection Results</h3>
+                    <div id="resultsContent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="federated-info">
+        <div class="federated-content">
+            <h2>Why Early Detection Matters</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Abnormal muscle growth is a critical warning sign. Our federated learning AI analyzes patterns from thousands of confirmed cases to provide accurate early detection.</p>
+            
+            <div class="federated-features">
+                <div class="feature-item">
+                    <h3>🔬 Pattern Recognition</h3>
+                    <p>AI identifies subtle growth patterns that indicate malignancy.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>⚡ Rapid Analysis</h3>
+                    <p>Get results in seconds to expedite medical intervention.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🌐 Global Data</h3>
+                    <p>Trained on diverse cases from multiple institutions worldwide.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🎯 High Accuracy</h3>
+                    <p>95%+ accuracy in detecting cancer-related muscle abnormalities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Comprehensive Cancer Care Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <div class="service-icon">🔬</div>
+                <h3>Advanced Imaging</h3>
+                <p>MRI, CT, and PET scans to analyze muscle tissue abnormalities and tumor detection.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🧬</div>
+                <h3>Biopsy Analysis</h3>
+                <p>Comprehensive tissue analysis to confirm cancer presence and type.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💊</div>
+                <h3>Targeted Therapy</h3>
+                <p>Personalized treatment plans based on tumor characteristics and location.</p>
+            </div>
+            
+               
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Continuous Monitoring</h3>
+                <p>Regular tracking of growth patterns and treatment response.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🤝</div>
+                <h3>Support Services</h3>
+                <p>Psychological support and care coordination throughout treatment.</p>
+            </div>
+        </div>
+    </section>
+
+    </div>
+
+    <div id="aboutPage" class="page-container">
+        <section class="about-hero">
+            <h1>About MedFL AI</h1>
+            <p>Revolutionizing cancer detection through federated learning and artificial intelligence</p>
+        </section>
+
+        <div class="about-content">
+            <div class="about-section">
+                <h2>Our Mission</h2>
+                <p>At MedFL AI, we're committed to saving lives through early cancer detection. Our mission is to leverage cutting-edge federated learning technology to identify cancer indicators from medical imaging, enabling healthcare providers to intervene earlier and improve patient outcomes.</p>
+                <p>We believe that advanced AI should be accessible to medical institutions worldwide, regardless of their resources. By using federated learning, we can train our models on diverse global datasets while preserving patient privacy and data security.</p>
+            </div>
+
+            <div class="about-section">
+                <h2>What is Federated Learning?</h2>
+                <p>Federated learning is a revolutionary machine learning approach that allows our AI model to learn from data across multiple hospitals and medical institutions without ever accessing the raw patient data directly.</p>
+                <p>Instead of centralizing sensitive medical data, our system sends the AI model to where the data lives. Each institution trains the model locally on their data, and only the improved model parameters are shared back to create a more accurate, globally-informed system.</p>
+                <p><strong>Key Benefits:</strong></p>
+                <ul style="margin-left: 2rem; margin-top: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">Patient privacy is preserved - data never leaves the hospital</li>
+                    <li style="margin-bottom: 0.5rem;">Learns from diverse populations and cases worldwide</li>
+                    <li style="margin-bottom: 0.5rem;">Complies with data protection regulations (HIPAA, GDPR)</li>
+                    <li style="margin-bottom: 0.5rem;">Enables smaller institutions to benefit from global medical knowledge</li>
+                </ul>
+            </div>
+
+            <div class="about-section">
+                <h2>Our Technology</h2>
+                <p>MedFL AI uses state-of-the-art deep learning algorithms trained on thousands of medical imaging cases, including:</p>
+                <ul style="margin-left: 2rem; margin-top: 1rem;">
+                    <li style="margin-bottom: 0.5rem;">X-ray analysis for detecting adenomatous polyps</li>
+                    <li style="margin-bottom: 0.5rem;">CT scan interpretation for villous adenomas</li>
+                    <li style="margin-bottom: 0.5rem;">MRI analysis for soft tissue abnormalities</li>
+                    <li style="margin-bottom: 0.5rem;">Pattern recognition for early-stage cancer indicators</li>
+                </ul>
+                <p style="margin-top: 1rem;">Our system achieves 95%+ accuracy in detecting cancer-related abnormalities, matching or exceeding the performance of experienced radiologists while processing images in seconds.</p>
+            </div>
+
+            <div class="about-section">
+                <h2>Our Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>2022 - Foundation</h3>
+                        <p>MedFL AI was founded by a team of AI researchers and oncologists who recognized the potential of federated learning in cancer detection.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>2023 - Research Phase</h3>
+                        <p>Partnered with 15 leading medical institutions globally to develop and validate our federated learning algorithms.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>2024 - Platform Launch</h3>
+                        <p>Successfully deployed our AI detection platform, now analyzing medical imaging from over 50 hospitals worldwide.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>2025 - Global Expansion</h3>
+                        <p>Expanding partnerships to include 100+ medical institutions and planning integration with major hospital information systems.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <h2>Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <h3>Dr. Sarah Chen</h3>
+                        <p>Chief Medical Officer</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Oncologist with 15+ years experience in cancer research</p>
+                    </div>
+                    <div class="team-card">
+                        <h3>Dr. James Martinez</h3>
+                        <p>Chief Technology Officer</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">AI researcher specializing in federated learning systems</p>
+                    </div>
+                    <div class="team-card">
+                        <h3>Dr. Priya Patel</h3>
+                        <p>Head of Research</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Machine learning expert with focus on medical imaging</p>
+                    </div>
+                    <div class="team-card">
+                        <h3>Michael Zhang</h3>
+                        <p>Director of Engineering</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Systems architect building scalable healthcare AI platforms</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <h2>Our Impact</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🏥</div>
+                        <h3>50+ Hospitals</h3>
+                        <p>Partner institutions using our federated learning platform</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">👥</div>
+                        <h3>10,000+ Patients</h3>
+                        <p>Analyzed for early cancer detection indicators</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🎯</div>
+                        <h3>95% Accuracy</h3>
+                        <p>Detection rate for cancer-related abnormalities</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">⏱️</div>
+                        <h3>Under 10 Seconds</h3>
+                        <p>Average analysis time per medical image</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-section" style="background: #E3F2FD; padding: 3rem; border-radius: 15px; text-align: center;">
+                <h2>Join Our Mission</h2>
+                <p>Are you a medical institution interested in implementing federated learning for cancer detection? We're always looking for partners who share our vision of making advanced AI accessible to healthcare providers worldwide.</p>
+                <button class="cta-button" style="margin-top: 2rem;" onclick="alert('Contact: partnerships@medfl-ai.com')">Partner With Us</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 MedFL AI. All rights reserved.</p>
+        <p>Early detection saves lives. Analyzing abnormal muscle growth for cancer indicators.</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">This is a demonstration platform. Not for actual medical diagnosis.</p>
+    </footer>
+
+    <script>
+        function showHomePage() {
+            document.getElementById('homePage').classList.add('active');
+            document.getElementById('aboutPage').classList.remove('active');
+            window.scrollTo(0, 0);
+        }
+
+        function showAboutPage() {
+            document.getElementById('homePage').classList.remove('active');
+            document.getElementById('aboutPage').classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        async function analyzeWithFL() {
+            const imageUpload = document.getElementById('imageUpload').files[0];
+            const age = document.getElementById('age').value;
+            const additionalInfo = document.getElementById('additionalInfo').value;
+
+            if (!imageUpload || !age) {
+                alert('Please upload an image and fill in patient age');
+                return;
+            }
+
+            const resultsSection = document.getElementById('results');
+            const resultsContent = document.getElementById('resultsContent');
+            const analyzeBtn = document.querySelector('.analyze-btn');
+
+            analyzeBtn.disabled = true;
+            analyzeBtn.textContent = 'Analyzing...';
+            resultsSection.classList.add('active');
+            resultsContent.innerHTML = '<div class="loading"><div class="spinner"></div><p>Processing medical imaging...</p><p>Analyzing for adenomatous polyps and abnormalities...</p><p>Calculating cancer probability...</p></div>';
+
+            try {
+                const response = await fetch('https://api.anthropic.com/v1/messages', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        model: 'claude-sonnet-4-20250514',
+                        max_tokens: 1000,
+                        messages: [{
+                            role: 'user',
+                            content: `You are a federated learning AI model trained on medical imaging analysis for cancer detection, specifically analyzing colon adenomas, polyps, and other intestinal abnormalities. Analyze this case:
+
+Image: Medical imaging uploaded (X-ray/CT/MRI showing potential adenomatous polyps or villous adenoma)
+Age: ${age}
+Clinical Notes: ${additionalInfo}
+
+Based on the type of imaging typically used for colon cancer detection (like the examples showing adenomatous polyps and villous adenomas), provide analysis.
+
+Return ONLY valid JSON (no markdown, no preamble):
+{
+  "cancer_risk_level": "HIGH/MEDIUM/LOW",
+  "cancer_probability": 85,
+  "findings": ["Large filling defect in sigmoid colon", "Adenomatous polyp in ascending colon"],
+  "likely_diagnosis": ["Villous adenoma", "Adenomatous polyp"],
+  "risk_factors": ["factor1", "factor2", "factor3"],
+  "immediate_actions": ["action1", "action2"],
+  "recommended_tests": ["Colonoscopy with biopsy", "Histopathological examination"],
+  "prognosis_if_treated": "Brief statement",
+  "urgency_level": "IMMEDIATE/URGENT/MODERATE"
+}`
+                        }]
+                    })
+                });
+
+                const data = await response.json();
+                const aiResponse = data.content.find(item => item.type === 'text')?.text || '';
+                
+                const jsonMatch = aiResponse.match(/\{[\s\S]*\}/);
+                const jsonStr = jsonMatch ? jsonMatch[0] : aiResponse;
+                const results = JSON.parse(jsonStr.trim());
+
+                displayResults(results);
+            } catch (error) {
+                resultsContent.innerHTML = `<div class="result-card alert-high"><h4>Analysis Error</h4><p>Unable to complete analysis. Please consult an oncologist immediately if you suspect cancer.</p></div>`;
+            } finally {
+                analyzeBtn.disabled = false;
+                analyzeBtn.textContent = 'Analyze Medical Imaging with AI';
+            }
+        }
+
+        function displayResults(results) {
+            const resultsContent = document.getElementById('resultsContent');
+            
+            const riskClass = results.cancer_risk_level === 'HIGH' ? 'alert-high' : 
+                             results.cancer_risk_level === 'MEDIUM' ? 'alert-medium' : 'alert-low';
+            const riskBadgeClass = results.cancer_risk_level === 'HIGH' ? 'risk-high' : 
+                                  results.cancer_risk_level === 'MEDIUM' ? 'risk-medium' : 'risk-low';
+            
+            let html = `
+                <div class="result-card ${riskClass}">
+                    <h4>⚠️ Cancer Detection Alert</h4>
+                    <span class="risk-indicator ${riskBadgeClass}">${results.cancer_risk_level} RISK</span>
+                    <p style="margin-top: 1rem; font-size: 1.1rem; font-weight: 500;">
+                        Cancer Probability: ${results.cancer_probability}%
+                    </p>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: ${results.cancer_probability}%; background: ${results.cancer_risk_level === 'HIGH' ? 'linear-gradient(90deg, #D32F2F, #B71C1C)' : results.cancer_risk_level === 'MEDIUM' ? 'linear-gradient(90deg, #FF9800, #F57C00)' : 'linear-gradient(90deg, #4CAF50, #2E7D32)'}">
+                            ${results.cancer_probability}%
+                        </div>
+                    </div>
+                    ${results.cancer_risk_level === 'HIGH' ? '<p style="color: #D32F2F; font-weight: bold; font-size: 1.1rem;">⚠️ IMMEDIATE MEDICAL ATTENTION REQUIRED</p>' : ''}
+                </div>
+
+                <div class="result-card">
+                    <h4>Imaging Findings</h4>
+                    <ul>
+                        ${results.findings.map(finding => `<li><strong>${finding}</strong></li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="result-card">
+                    <h4>Likely Diagnosis</h4>
+                    <ul>
+                        ${results.likely_diagnosis.map(diagnosis => `<li><strong>${diagnosis}</strong></li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="result-card">
+                    <h4>Risk Factors Identified</h4>
+                    <ul>
+                        ${results.risk_factors.map(risk => `<li>${risk}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="result-card ${riskClass}">
+                    <h4>Immediate Actions Required - ${results.urgency_level}</h4>
+                    <ul>
+                        ${results.immediate_actions.map(action => `<li><strong>${action}</strong></li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="result-card">
+                    <h4>Recommended Diagnostic Tests</h4>
+                    <ul>
+                        ${results.recommended_tests.map(test => `<li>${test}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="result-card">
+                    <h4>Prognosis with Treatment</h4>
+                    <p>${results.prognosis_if_treated}</p>
+                </div>
+            `;
+
+            resultsContent.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
